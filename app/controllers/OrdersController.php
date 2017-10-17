@@ -15,13 +15,14 @@ class OrdersController
 	{
 		$payments=Payment::all();
 		$link_full='/admin/orders?p={page}';
+		$limit = 10;
 		$count=Orders::count();
-		$pagination = $this->pagination($count[0]->total_record,$link_full);
-		$paginghtml = $pagination['paginghtml'];
-		$limit = $pagination['config']['limit'];
-		$current_page = $pagination['config']['current_page'];
+		$current_page = isset($_GET['p']) ? $_GET['p'] : 1;
+		$paging = new Pagination();
+		$paging->init($current_page, $limit, $link_full, $count[0]->total_record);
 		$orders=Orders::allOrdersPagination($current_page,$limit);	
-		return view('admin/orders/index',['orders'=>$orders,'paginghtml'=>$paginghtml,'payments'=>$payments]);
+		return view('admin/orders/index',['orders'=>$orders,'paginghtml'=>$paging->html(),'payments'=>$payments]);
+
 	}
 	
 
@@ -83,21 +84,21 @@ class OrdersController
 		}
 	}
 
-	public function pagination($count,$link_full)
-	{
-		$config = array(
-			    'current_page'  => isset($_GET['p']) ? $_GET['p'] : 1, // Trang hiện tại
-			    'total_record'  => $count, // Tổng số record
-			 	//  'limit'         => 10,// limit
-			    'link_full'     => $link_full, //'/admin/users?p={page}' =Link full có dạng như sau: domain/com/page/{page}
-			    'link_first'    => str_replace('{page}', '1', $link_full),// Link trang đầu tiên
-			    'range'         => 9, // Số button trang bạn muốn hiển thị 
-			    );
-		$paging = new Pagination();
-		$paging->init($config);
-		$paginghtml = $paging->html();
-		return  array('config' => $paging->_config, 'paginghtml' => $paginghtml, );
-	} 
+	// public function pagination($count,$link_full)
+	// {
+	// 	$config = array(
+	// 		    'current_page'  => isset($_GET['p']) ? $_GET['p'] : 1, // Trang hiện tại
+	// 		    'total_record'  => $count, // Tổng số record
+	// 		 	//  'limit'         => 10,// limit
+	// 		    'link_full'     => $link_full, //'/admin/users?p={page}' =Link full có dạng như sau: domain/com/page/{page}
+	// 		    'link_first'    => str_replace('{page}', '1', $link_full),// Link trang đầu tiên
+	// 		    'range'         => 9, // Số button trang bạn muốn hiển thị 
+	// 		    );
+	// 	$paging = new Pagination();
+	// 	$paging->init($config);
+	// 	$paginghtml = $paging->html();
+	// 	return  array('config' => $paging->_config, 'paginghtml' => $paginghtml, );
+	// } 
 
 
 	public function search()
@@ -124,13 +125,13 @@ class OrdersController
 			$ArrOrders=Orders::search($search_Order);
 
 			$link_full='/admin/orders/search?p={page}&'.$params;
+			$limit = 10;
 			$count=count($ArrOrders);
-			$pagination = $this->pagination($count,$link_full);
-			$paginghtml = $pagination['paginghtml'];
-			$limit = $pagination['config']['limit'];
-			$current_page = $pagination['config']['current_page'];
+			$current_page = isset($_GET['p']) ? $_GET['p'] : 1;
+			$paging = new Pagination();
+			$paging->init($current_page, $limit, $link_full, $count);
 			$orders=Orders::allSearch($current_page,$limit,$search_Order);	
-			return view('admin/orders/index',['orders'=>$orders, 'paginghtml'=>$paginghtml,'search_Order'=>$search_Order,'payments'=>$payments]);
+			return view('admin/orders/index',['orders'=>$orders, 'paginghtml'=>$paging->html(),'search_Order'=>$search_Order,'payments'=>$payments]);
 		} else {
 			return redirect('admin/orders');
 
