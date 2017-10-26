@@ -2882,6 +2882,8 @@ a {
         margin: 20px 0; }
         .wrapper #content #details-product .right .info-product h4 {
           margin: 10px 0; }
+    .wrapper #content #details-product fb-comments {
+      margin-left: 40px; }
   .wrapper #content #login-register {
     position: fixed;
     top: 30px;

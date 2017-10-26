@@ -25,7 +25,8 @@ require dirname(__DIR__).'/public/require/header.view.php';
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
         <?php
             require dirname(__DIR__).'/public/require/branch.view.php';
         ?>
