@@ -16,7 +16,19 @@ require dirname(__DIR__).'/public/require/header.view.php';
                         </a>
                         <ul id="list-images-head">
                             <li>
+                                <img src="/public/assets/img/men-3.png" alt="men image">
+                            </li>
+                            <li>
+                                <img src="/public/assets/img/women-3.png" alt="men image">
+                            </li>
+                            <li>
                                 <img src="/public/assets/img/men.png" alt="men image">
+                            </li>
+                            <li>
+                                <img src="/public/assets/img/women-2.png" alt="men image">
+                            </li>
+                            <li>
+                                <img src="/public/assets/img/men-2.png" alt="men image">
                             </li>
                             <li>
                                 <img src="/public/assets/img/women.png" alt="men image">
@@ -27,42 +39,40 @@ require dirname(__DIR__).'/public/require/header.view.php';
             </div>
         </div>
     </section>
-        <?php
-            require dirname(__DIR__).'/public/require/branch.view.php';
-        ?>
-            <section id="best-sellers">
-                <div class="container-full">
+        
+        <section id="best-sellers">
+            <div class="container-full">
+                <div class="row">
+                    <?php
+                        require dirname(__DIR__).'/public/require/search.view.php';
+                    ?>
                     <div class="row">
-                        <?php
-                            require dirname(__DIR__).'/public/require/search.view.php';
-                        ?>
-                        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="features">
                                 <div class="row">
                                     <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
                                         <div class="products">
                                             <div class="box-title"><?php if(isset($cat[0]->name)){echo $cat[0]->name;}else{echo "Features";}?></div>
                                             <?php
-    										if(!empty($products_info))
-    										{ 
-    											foreach($products_info as $item)  { ?>
-    										<div class="product">
-                                                <div class="cover-img">
-                                                    <a href="/detail/<?php echo $item->id;?>">
-                                                        <img src="/public/upload/product_info/<?php echo $item->image; ?>" alt="">
-                                                    </a>
+                                                if(!empty($products_info))
+                                                { 
+                                                    foreach($products_info as $item)  { ?>
+                                                <div class="product">
+                                                    <div class="cover-img">
+                                                        <a href="/detail/<?php echo $item->id;?>">
+                                                            <img src="/public/upload/product_info/<?php echo $item->image; ?>" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <span class="name"><?php echo $item->name; ?></span>
+                                                    <span class="price">$ <?php echo number_format($item->price); ?></span>
                                                 </div>
-                                                <span class="name"><?php echo $item->name; ?></span>
-                                                <span class="price"><?php echo number_format($item->price); ?> VND</span>
-                                            </div>
-    											<?php } 
-                                            }else{
-                                                echo '<div style="text-align:center;font-weight:bold">No product</div>';
-                                            }
-
-                                                ?>
+                                                    <?php } 
+                                                }else{
+                                                    echo '<div style="text-align:center;font-weight:bold">No product</div>';
+                                                }
+                                            ?>
                                             <div class="row">
-                                                <div class="col-lg-12">
+                                                <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
                                                     <div class="cover-pagination">
                                                         <?php 
                                                         if(isset($paging)){
@@ -70,23 +80,27 @@ require dirname(__DIR__).'/public/require/header.view.php';
                                                         }
                                                         ?>
                                                     </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
-            </section>
-            <section id="hot-products">
-
+                    
+                </div>
+            </div>
+        </section>
+        <section id="hot-products">
             <?php
-            require dirname(__DIR__).'/public/require/hot_product.view.php';
-        ?>
-            </section>
-            <?php
-            require dirname(__DIR__).'/public/require/login-register.view.php';
+                require dirname(__DIR__).'/public/require/hot_product.view.php';
             ?>
+        </section>
+        <?php
+            require dirname(__DIR__).'/public/require/login-register.view.php';
+        ?>
         </div>
         <?php
         require dirname(__DIR__).'/public/require/footer.view.php';

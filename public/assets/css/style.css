@@ -122,8 +122,10 @@ a {
       text-align: center;
       position: relative;
       z-index: 100; }
+      .wrapper #navbar .btn-bag:hover {
+        cursor: pointer; }
       .wrapper #navbar .btn-bag i {
-        font-size: 28px; }
+        font-size: 30px; }
       .wrapper #navbar .btn-bag .indicator {
         position: absolute;
         width: 30px;
@@ -157,7 +159,9 @@ a {
       text-align: center;
       float: right; }
       .wrapper #navbar .btn-menu i {
-        font-size: 28px; }
+        font-size: 30px; }
+      .wrapper #navbar .btn-menu:hover {
+        cursor: pointer; }
     .wrapper #navbar .mobile-menu {
       position: absolute;
       top: 51px;
@@ -193,35 +197,43 @@ a {
             font-size: 16px; }
   .wrapper #content #head-slide {
     position: relative; }
-    .wrapper #content #head-slide .slide-box ul {
-      list-style: none;
-      width: 2000px; }
-      .wrapper #content #head-slide .slide-box ul li {
-        width: 479px;
-        float: left; }
-        .wrapper #content #head-slide .slide-box ul li img {
-          width: 100%;
-          z-index: 100; }
-    .wrapper #content #head-slide .slide-box .btn-shop {
-      width: 200px;
-      height: 50px;
-      position: absolute;
-      left: 50%;
-      margin-left: -100px;
-      bottom: 20%;
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      background-color: rgba(0, 0, 0, 0.2);
-      font-size: 20px;
-      color: rgba(255, 255, 255, 0.5);
-      z-index: 105; }
-      .wrapper #content #head-slide .slide-box .btn-shop:hover {
-        border: 1px solid white;
-        background-color: black;
-        color: white; }
-    .wrapper #content #head-slide .slide-box .btn-men {
-      bottom: 90px; }
-    .wrapper #content #head-slide .slide-box .btn-women {
-      bottom: 30px; }
+    .wrapper #content #head-slide .slide-box {
+      width: 450px;
+      height: 300px;
+      overflow: hidden; }
+      .wrapper #content #head-slide .slide-box ul {
+        list-style: none;
+        width: 20000px;
+        white-space: nowrap; }
+        .wrapper #content #head-slide .slide-box ul li {
+          width: 450px;
+          height: 100%;
+          float: left; }
+          .wrapper #content #head-slide .slide-box ul li img {
+            width: 100%;
+            height: 100%;
+            z-index: 100; }
+      .wrapper #content #head-slide .slide-box .btn-shop {
+        width: 200px;
+        height: 50px;
+        position: absolute;
+        left: 50%;
+        margin-left: -100px;
+        bottom: 20%;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        background-color: rgba(0, 0, 0, 0.2);
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.5);
+        z-index: 105; }
+        .wrapper #content #head-slide .slide-box .btn-shop:hover {
+          border: 1px solid white;
+          background-color: black;
+          color: white;
+          cursor: pointer; }
+      .wrapper #content #head-slide .slide-box .btn-men {
+        bottom: 90px; }
+      .wrapper #content #head-slide .slide-box .btn-women {
+        bottom: 30px; }
   .wrapper #content #brands {
     margin-top: 30px;
     position: relative;
@@ -237,6 +249,40 @@ a {
         height: 100%; }
       .wrapper #content #brands .cover-brands .brand-box:hover {
         border: 1px solid black; }
+  .wrapper #content #best-sellers .menu-vertical {
+    margin-top: 30px;
+    position: relative;
+    border-top: 1px solid black;
+    padding: 10px; }
+    .wrapper #content #best-sellers .menu-vertical .cover-search {
+      width: 50%;
+      float: left;
+      padding: 0 10px; }
+    .wrapper #content #best-sellers .menu-vertical label {
+      display: block;
+      margin-top: 20px; }
+    .wrapper #content #best-sellers .menu-vertical .select {
+      width: 100%;
+      height: 35px;
+      border: 1px solid black;
+      font-size: 14px;
+      background-color: #fff; }
+    .wrapper #content #best-sellers .menu-vertical .input-price {
+      width: 100%;
+      height: 35px;
+      font-size: 14px;
+      border: 1px solid black;
+      background-color: #fff; }
+    .wrapper #content #best-sellers .menu-vertical .btn-search {
+      width: 100%;
+      height: 35px;
+      font-size: 16px;
+      border: 1px solid black;
+      margin-top: 37px;
+      color: #fff;
+      background-color: #000; }
+      .wrapper #content #best-sellers .menu-vertical .btn-search:hover {
+        cursor: pointer; }
   .wrapper #content #best-sellers .products {
     margin-top: 30px;
     position: relative;
@@ -283,11 +329,25 @@ a {
       .wrapper #content #best-sellers .products .product .price {
         font-size: 16px;
         margin-left: 10px; }
+    .wrapper #content #best-sellers .products .cover-pagination {
+      margin: 30px 0; }
+      .wrapper #content #best-sellers .products .cover-pagination ul {
+        list-style: none;
+        float: right; }
+        .wrapper #content #best-sellers .products .cover-pagination ul li {
+          min-width: 30px;
+          height: 30px;
+          float: left;
+          margin-right: 4px;
+          padding: 5px;
+          font-size: 16px;
+          border: 1px solid #000; }
   .wrapper #content #hot-products {
     margin-top: 30px;
     position: relative;
     border-top: 1px solid black;
-    padding-top: 20px; }
+    padding-top: 20px;
+    height: 300px; }
     .wrapper #content #hot-products .cover-box {
       width: 100%;
       overflow-x: hidden; }
@@ -662,33 +722,38 @@ a {
       .wrapper #content #details-product .right .price-product {
         font-size: 20px; }
       .wrapper #content #details-product .right .size-select {
-        width: 110px;
+        width: 150px;
         height: 30px;
         margin: 20px 0;
         border: 1px solid #000;
         border-radius: none;
-        display: block; }
+        display: block;
+        background-color: #fff; }
         .wrapper #content #details-product .right .size-select option {
           border-radius: none; }
       .wrapper #content #details-product .right .quantity {
         margin: 20px 0;
         float: left; }
         .wrapper #content #details-product .right .quantity input {
-          width: 50px;
+          width: 90px;
           height: 30px;
           text-align: center;
           font-size: 13px;
           margin: 0 2px;
           border: none;
-          border: 1px solid black; }
+          border: 1px solid black;
+          background-color: #fff;
+          float: left; }
         .wrapper #content #details-product .right .quantity button {
           width: 30px;
           height: 30px;
-          font-size: 14px; }
+          font-size: 16px;
+          background-color: #fff; }
         .wrapper #content #details-product .right .quantity .btn-plus {
           margin-right: 20px;
           border: 1px solid black; }
         .wrapper #content #details-product .right .quantity .btn-sub {
+          float: left;
           border: 1px solid black; }
       .wrapper #content #details-product .right ul#list-color {
         list-style: none;
@@ -726,9 +791,10 @@ a {
           text-decoration: none;
           color: #fff; }
       .wrapper #content #details-product .right .info-product {
-        margin: 20px 0; }
-        .wrapper #content #details-product .right .info-product h4 {
-          margin: 10px 0; }
+        margin: 50px 0; }
+        .wrapper #content #details-product .right .info-product p {
+          font: sanserif;
+          margin: 20px 0; }
   .wrapper #footer {
     border-top: 2px solid black;
     margin-top: 20px; }
@@ -770,10 +836,11 @@ a {
           .wrapper #footer .menu-box .box-right .contact .send-mail .send {
             width: 70px;
             height: 30px;
-            border: 1px solid black; }
+            border: 1px solid black;
+            color: white;
+            background-color: black; }
             .wrapper #footer .menu-box .box-right .contact .send-mail .send:hover {
-              color: white;
-              background-color: black; }
+              cursor: pointer; }
         .wrapper #footer .menu-box .box-right .social-link {
           margin-top: 10px; }
           .wrapper #footer .menu-box .box-right .social-link ul {
@@ -783,30 +850,36 @@ a {
               float: left;
               margin-right: 10px; }
               .wrapper #footer .menu-box .box-right .social-link ul li a i {
-                width: 30px;
-                height: 30px;
-                border: 1px solid black;
-                padding: 6px;
+                width: 40px;
+                height: 40px;
+                padding: 10px;
                 font-size: 18px;
-                border-radius: 15px; }
+                border-radius: 20px; }
               .wrapper #footer .menu-box .box-right .social-link ul li a i.facebook {
-                padding: 8px; }
+                padding: 12px;
+                color: white;
+                background-color: #3a5b93; }
                 .wrapper #footer .menu-box .box-right .social-link ul li a i.facebook:hover {
-                  color: white;
-                  background-color: #3a5b93;
+                  cursor: pointer;
                   border: none; }
-              .wrapper #footer .menu-box .box-right .social-link ul li a i.twitter:hover {
+              .wrapper #footer .menu-box .box-right .social-link ul li a i.twitter {
                 color: white;
-                background-color: #00a3ec;
-                border: none; }
-              .wrapper #footer .menu-box .box-right .social-link ul li a i.google:hover {
+                background-color: #00a3ec; }
+                .wrapper #footer .menu-box .box-right .social-link ul li a i.twitter:hover {
+                  cursor: pointer;
+                  border: none; }
+              .wrapper #footer .menu-box .box-right .social-link ul li a i.google {
                 color: #f99;
-                background-color: #00a3ec;
-                border: none; }
-              .wrapper #footer .menu-box .box-right .social-link ul li a i.pinterest:hover {
+                background-color: #00a3ec; }
+                .wrapper #footer .menu-box .box-right .social-link ul li a i.google:hover {
+                  cursor: pointer;
+                  border: none; }
+              .wrapper #footer .menu-box .box-right .social-link ul li a i.pinterest {
                 color: white;
-                background-color: #f97;
-                border: none; }
+                background-color: #f97; }
+                .wrapper #footer .menu-box .box-right .social-link ul li a i.pinterest:hover {
+                  cursor: pointer;
+                  border: none; }
     .wrapper #footer .copyright {
       height: 30px;
       text-align: center;
@@ -890,7 +963,7 @@ a {
       position: relative;
       z-index: 100; }
       .wrapper #navbar .btn-bag i {
-        font-size: 28px; }
+        font-size: 30px; }
       .wrapper #navbar .btn-bag .indicator {
         position: absolute;
         width: 30px;
@@ -925,13 +998,13 @@ a {
       float: right;
       margin-top: 8px; }
       .wrapper #navbar .btn-menu i {
-        font-size: 28px; }
+        font-size: 30px; }
     .wrapper #navbar .mobile-menu {
       position: absolute;
       top: 50px;
       left: 0;
       width: 100%;
-      background-color: #272822;
+      background-color: #000;
       display: none;
       z-index: 200; }
       .wrapper #navbar .mobile-menu ul {
@@ -945,7 +1018,7 @@ a {
           .wrapper #navbar .mobile-menu ul li .title-menu {
             font-size: 20px;
             padding-top: 0;
-            color: #F75F23; }
+            color: #8a2411; }
           .wrapper #navbar .mobile-menu ul li h4 {
             font-size: 20px;
             color: #F75F23; }
@@ -962,21 +1035,23 @@ a {
   .wrapper #content #head-slide {
     position: relative; }
     .wrapper #content #head-slide .slide-box {
-      overflow-x: hidden; }
+      overflow-x: hidden;
+      width: 600px;
+      height: 400px; }
       .wrapper #content #head-slide .slide-box ul {
-        width: 5000px;
+        width: 20000px;
         white-space: nowrap;
         list-style: none; }
         .wrapper #content #head-slide .slide-box ul li {
-          width: 960px;
-          max-height: 500px;
+          width: 600px;
+          max-height: 400px;
           overflow: hidden;
           float: left; }
           .wrapper #content #head-slide .slide-box ul li img {
             width: 100%;
             z-index: 100; }
       .wrapper #content #head-slide .slide-box .btn-shop {
-        width: 200px;
+        width: 250px;
         height: 50px;
         position: absolute;
         left: 50%;
@@ -1013,6 +1088,40 @@ a {
           height: 100%; }
       .wrapper #content #brands .cover-brands .brand-box:hover {
         border: 1px solid black; }
+  .wrapper #content #best-sellers .menu-vertical {
+    margin-top: 30px;
+    position: relative;
+    border-top: 1px solid black;
+    padding: 10px; }
+    .wrapper #content #best-sellers .menu-vertical .cover-search {
+      width: 25%;
+      float: left;
+      padding: 0 10px; }
+    .wrapper #content #best-sellers .menu-vertical label {
+      display: block;
+      margin-top: 20px; }
+    .wrapper #content #best-sellers .menu-vertical .select {
+      width: 100%;
+      height: 35px;
+      border: 1px solid black;
+      font-size: 14px;
+      background-color: #fff; }
+    .wrapper #content #best-sellers .menu-vertical .input-price {
+      width: 100%;
+      height: 35px;
+      font-size: 14px;
+      border: 1px solid black;
+      background-color: #fff; }
+    .wrapper #content #best-sellers .menu-vertical .btn-search {
+      width: 100%;
+      height: 35px;
+      font-size: 16px;
+      border: 1px solid black;
+      margin-top: 37px;
+      color: #fff;
+      background-color: #000; }
+      .wrapper #content #best-sellers .menu-vertical .btn-search:hover {
+        cursor: pointer; }
   .wrapper #content #best-sellers .products {
     margin-top: 30px;
     position: relative;
@@ -1059,11 +1168,25 @@ a {
       .wrapper #content #best-sellers .products .product .price {
         font-size: 18px;
         margin-left: 10px; }
+    .wrapper #content #best-sellers .products .cover-pagination {
+      margin: 30px 0; }
+      .wrapper #content #best-sellers .products .cover-pagination ul {
+        list-style: none;
+        float: right; }
+        .wrapper #content #best-sellers .products .cover-pagination ul li {
+          min-width: 30px;
+          height: 30px;
+          float: left;
+          margin-right: 4px;
+          padding: 5px;
+          font-size: 16px;
+          border: 1px solid #000; }
   .wrapper #content #hot-products {
     margin-top: 30px;
     position: relative;
     border-top: 1px solid black;
-    padding-top: 20px; }
+    padding-top: 20px;
+    height: 300px; }
     .wrapper #content #hot-products .cover-box {
       width: 100%;
       overflow-x: hidden; }
@@ -1508,9 +1631,10 @@ a {
           text-decoration: none;
           color: #fff; }
       .wrapper #content #details-product .right .info-product {
-        margin: 20px 0; }
-        .wrapper #content #details-product .right .info-product h4 {
-          margin: 10px 0; }
+        margin: 50px 0; }
+        .wrapper #content #details-product .right .info-product p {
+          font: sanserif;
+          margin: 20px 0; }
   .wrapper #footer {
     border-top: 2px solid black;
     margin-top: 20px; }
@@ -1539,19 +1663,20 @@ a {
           .wrapper #footer .menu-box .box-right .contact .title {
             font-size: 18px; }
           .wrapper #footer .menu-box .box-right .contact .status {
-            margin: 5px 5px; }
+            margin: 5px; }
           .wrapper #footer .menu-box .box-right .contact .send-mail input {
             height: 30px;
             min-width: 70%;
             border: 1px solid black;
-            margin: 0 5px; }
+            margin: 0 2px; }
           .wrapper #footer .menu-box .box-right .contact .send-mail .send {
             width: 70px;
             height: 30px;
-            border: 1px solid black; }
+            border: 1px solid black;
+            color: white;
+            background-color: black; }
             .wrapper #footer .menu-box .box-right .contact .send-mail .send:hover {
-              color: white;
-              background-color: black; }
+              cursor: pointer; }
         .wrapper #footer .menu-box .box-right .social-link {
           margin-top: 10px; }
           .wrapper #footer .menu-box .box-right .social-link ul {
@@ -1561,30 +1686,36 @@ a {
               float: left;
               margin-right: 10px; }
               .wrapper #footer .menu-box .box-right .social-link ul li a i {
-                width: 30px;
-                height: 30px;
-                border: 1px solid black;
-                padding: 6px;
+                width: 40px;
+                height: 40px;
+                padding: 10px;
                 font-size: 18px;
-                border-radius: 15px; }
+                border-radius: 20px; }
               .wrapper #footer .menu-box .box-right .social-link ul li a i.facebook {
-                padding: 8px; }
+                padding: 8px;
+                background-color: #3a5b93;
+                color: white; }
                 .wrapper #footer .menu-box .box-right .social-link ul li a i.facebook:hover {
-                  color: white;
-                  background-color: #3a5b93;
+                  cursor: pointer;
                   border: none; }
-              .wrapper #footer .menu-box .box-right .social-link ul li a i.twitter:hover {
-                color: white;
+              .wrapper #footer .menu-box .box-right .social-link ul li a i.twitter {
                 background-color: #00a3ec;
-                border: none; }
-              .wrapper #footer .menu-box .box-right .social-link ul li a i.google:hover {
+                color: white; }
+                .wrapper #footer .menu-box .box-right .social-link ul li a i.twitter:hover {
+                  cursor: pointer;
+                  border: none; }
+              .wrapper #footer .menu-box .box-right .social-link ul li a i.google {
                 color: #f99;
-                background-color: #00a3ec;
-                border: none; }
-              .wrapper #footer .menu-box .box-right .social-link ul li a i.pinterest:hover {
+                background-color: #00a3ec; }
+                .wrapper #footer .menu-box .box-right .social-link ul li a i.google:hover {
+                  border: none;
+                  cursor: pointer; }
+              .wrapper #footer .menu-box .box-right .social-link ul li a i.pinterest {
                 color: white;
-                background-color: #f97;
-                border: none; }
+                background-color: #f97; }
+                .wrapper #footer .menu-box .box-right .social-link ul li a i.pinterest:hover {
+                  border: none;
+                  cursor: pointer; }
     .wrapper #footer .copyright {
       height: 30px;
       text-align: center;
@@ -1758,7 +1889,8 @@ a {
     overflow-x: hidden; }
     .wrapper #content #head-slide .slide-box {
       margin-top: -1px;
-      width: 100%; }
+      width: 980px;
+      height: 600px; }
       .wrapper #content #head-slide .slide-box .btn-shop {
         position: absolute;
         bottom: 20%;
@@ -1780,7 +1912,7 @@ a {
         width: 300px;
         height: 70px; }
       .wrapper #content #head-slide .slide-box ul {
-        width: 5000px;
+        width: 20000px;
         white-space: nowrap; }
         .wrapper #content #head-slide .slide-box ul li {
           width: 980px;
@@ -1812,10 +1944,12 @@ a {
     .wrapper #content #best-sellers .container-full .menu-vertical {
       margin-top: 30px;
       position: relative;
-      border: 1px solid black;
-      height: 100%;
-      padding: 10px;
-      padding-top: 30px; }
+      border-top: 1px solid black;
+      padding: 10px; }
+      .wrapper #content #best-sellers .container-full .menu-vertical .cover-search {
+        width: 25%;
+        float: left;
+        padding: 0 10px; }
       .wrapper #content #best-sellers .container-full .menu-vertical label {
         display: block;
         margin-top: 20px; }
@@ -1832,15 +1966,14 @@ a {
         border: 1px solid black;
         background-color: #fff; }
       .wrapper #content #best-sellers .container-full .menu-vertical .btn-search {
-        width: 50%;
+        width: 100%;
         height: 35px;
-        font-size: 14px;
+        font-size: 16px;
         border: 1px solid black;
-        margin-top: 20px;
-        background-color: #fff; }
+        margin-top: 37px;
+        color: #fff;
+        background-color: #000; }
         .wrapper #content #best-sellers .container-full .menu-vertical .btn-search:hover {
-          color: #fff;
-          background-color: #000;
           cursor: pointer; }
     .wrapper #content #best-sellers .container-full .features .title-box {
       border-bottom: 1px solid black; }
@@ -1893,7 +2026,21 @@ a {
         .wrapper #content #best-sellers .container-full .features .products .product .price {
           font-size: 16px;
           margin-left: 10px; }
+      .wrapper #content #best-sellers .container-full .features .products .cover-pagination {
+        margin: 30px 0; }
+        .wrapper #content #best-sellers .container-full .features .products .cover-pagination ul {
+          list-style: none;
+          float: right; }
+          .wrapper #content #best-sellers .container-full .features .products .cover-pagination ul li {
+            min-width: 30px;
+            height: 30px;
+            float: left;
+            margin-right: 4px;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #000; }
   .wrapper #content #hot-products {
+    height: 300px;
     margin-top: 30px;
     position: relative;
     border-top: 1px solid black;
@@ -1922,7 +2069,8 @@ a {
           margin-right: 20px; }
           .wrapper #content #hot-products .cover-box ul li .product {
             width: 100%;
-            float: left; }
+            float: left;
+            text-align: center; }
             .wrapper #content #hot-products .cover-box ul li .product .cover-img {
               height: 80%; }
               .wrapper #content #hot-products .cover-box ul li .product .cover-img img {
@@ -1933,6 +2081,7 @@ a {
               margin: 5px 10px;
               display: block; }
             .wrapper #content #hot-products .cover-box ul li .product .price {
+              display: block;
               font-size: 16px;
               margin-left: 10px; }
   .wrapper #content #details-product {
@@ -1975,33 +2124,38 @@ a {
       .wrapper #content #details-product .right .price-product {
         font-size: 20px; }
       .wrapper #content #details-product .right .size-select {
-        width: 110px;
+        width: 150px;
         height: 30px;
         margin: 20px 0;
         border: 1px solid #000;
         border-radius: none;
-        display: block; }
+        display: block;
+        background-color: #fff; }
         .wrapper #content #details-product .right .size-select option {
           border-radius: none; }
       .wrapper #content #details-product .right .quantity {
         margin: 20px 0;
         float: left; }
         .wrapper #content #details-product .right .quantity input {
-          width: 50px;
+          width: 90px;
           height: 30px;
           text-align: center;
           font-size: 18px;
           margin: 0 2px;
           border: none;
-          border: 1px solid black; }
+          border: 1px solid black;
+          background-color: #fff;
+          float: left; }
         .wrapper #content #details-product .right .quantity button {
           width: 30px;
           height: 30px;
-          font-size: 18px; }
+          font-size: 18px;
+          background-color: #fff; }
         .wrapper #content #details-product .right .quantity .btn-plus {
           margin-right: 20px;
           border: 1px solid black; }
         .wrapper #content #details-product .right .quantity .btn-sub {
+          float: left;
           border: 1px solid black; }
       .wrapper #content #details-product .right ul#list-color {
         list-style: none;
@@ -2026,9 +2180,9 @@ a {
             background-color: green; }
       .wrapper #content #details-product .right .add-cart {
         margin-right: 20px;
-        background-color: #0bf; }
+        background-color: #2DA9FF; }
       .wrapper #content #details-product .right .checkout {
-        background-color: #f97; }
+        background-color: #FF7F00; }
       .wrapper #content #details-product .right button {
         width: 150px;
         height: 40px;
@@ -2040,8 +2194,10 @@ a {
           color: #fff; }
       .wrapper #content #details-product .right .info-product {
         margin: 20px 0; }
-        .wrapper #content #details-product .right .info-product h4 {
-          margin: 10px 0; }
+        .wrapper #content #details-product .right .info-product p {
+          font-family: sans-serif;
+          font-size: 13px;
+          margin: 20px 0; }
   .wrapper #content #login-register {
     position: fixed;
     top: 30px;
@@ -2341,7 +2497,7 @@ a {
     border-top: 2px solid black;
     margin-top: 20px; }
     .wrapper #footer .menu-box {
-      padding: 20px 20px; }
+      padding: 20px 30px; }
       .wrapper #footer .menu-box .box-left {
         width: 65%;
         float: left; }
@@ -2350,8 +2506,7 @@ a {
           padding: 5px;
           float: left; }
           .wrapper #footer .menu-box .box-left .box ul {
-            list-style: none;
-            margin-left: 0px; }
+            list-style: none; }
             .wrapper #footer .menu-box .box-left .box ul li {
               margin: 5px 0; }
               .wrapper #footer .menu-box .box-left .box ul li a {
@@ -2362,20 +2517,27 @@ a {
         width: 35%;
         float: right; }
         .wrapper #footer .menu-box .box-right .contact .title {
-          margin-top: 10px; }
+          padding-top: 10px; }
         .wrapper #footer .menu-box .box-right .contact .status {
-          margin: 10px 0; }
+          margin: 5px 0;
+          font-size: 13px; }
         .wrapper #footer .menu-box .box-right .contact .send-mail input {
           height: 30px;
           min-width: 70%;
-          border: 1px solid black; }
+          border: 1px solid black;
+          padding-left: 5px;
+          font-size: 14px;
+          float: left; }
         .wrapper #footer .menu-box .box-right .contact .send-mail .send {
           width: 70px;
           height: 30px;
-          border: 1px solid black; }
+          color: white;
+          background-color: black;
+          border: 1px solid black;
+          margin-top: 0;
+          margin-left: 2px; }
           .wrapper #footer .menu-box .box-right .contact .send-mail .send:hover {
-            color: white;
-            background-color: black; }
+            cursor: pointer; }
         .wrapper #footer .menu-box .box-right .contact .social-link {
           margin-top: 10px; }
           .wrapper #footer .menu-box .box-right .contact .social-link ul {
@@ -2385,30 +2547,36 @@ a {
               float: left;
               margin-right: 10px; }
               .wrapper #footer .menu-box .box-right .contact .social-link ul li a i {
-                width: 30px;
-                height: 30px;
-                border: 1px solid black;
-                padding: 6px;
+                width: 40px;
+                height: 40px;
+                padding: 10px;
                 font-size: 18px;
-                border-radius: 15px; }
+                border-radius: 20px; }
               .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.facebook {
-                padding: 8px; }
+                padding: 8px;
+                background-color: #3a5b93;
+                color: white; }
                 .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.facebook:hover {
-                  color: white;
-                  background-color: #3a5b93;
+                  cursor: pointer;
                   border: none; }
-              .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.twitter:hover {
-                color: white;
+              .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.twitter {
                 background-color: #00a3ec;
-                border: none; }
-              .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.google:hover {
+                color: white; }
+                .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.twitter:hover {
+                  cursor: pointer;
+                  border: none; }
+              .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.google {
                 color: #f99;
-                background-color: #00a3ec;
-                border: none; }
-              .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.pinterest:hover {
+                background-color: #00a3ec; }
+                .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.google:hover {
+                  border: none;
+                  cursor: pointer; }
+              .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.pinterest {
                 color: white;
-                background-color: #f97;
-                border: none; }
+                background-color: #f97; }
+                .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.pinterest:hover {
+                  border: none;
+                  cursor: pointer; }
     .wrapper #footer .copyright {
       height: 30px;
       text-align: center;
@@ -2498,13 +2666,12 @@ a {
           font-size: 35px;
           color: red; }
       .wrapper #header #navbar .navbar-full .menu {
-        margin-top: 15px;
-        font-family: SagonaFF; }
+        font-family: SagonaFF;
+        margin-top: 20px; }
         .wrapper #header #navbar .navbar-full .menu ul {
-          list-style: none;
-          padding: 10px; }
+          list-style: none; }
           .wrapper #header #navbar .navbar-full .menu ul li {
-            height: 60px;
+            height: 40px;
             float: left;
             margin-left: 20px; }
             .wrapper #header #navbar .navbar-full .menu ul li a {
@@ -2545,20 +2712,6 @@ a {
                   height: 100%; }
             .wrapper #header #navbar .navbar-full .menu ul li:hover .menu-child {
               display: block; }
-      .wrapper #header #navbar .navbar-full .search-box {
-        margin-top: 23px; }
-        .wrapper #header #navbar .navbar-full .search-box i {
-          font-size: 20px;
-          margin-left: 10px;
-          margin-right: 5px;
-          margin-top: 0px;
-          text-align: right; }
-        .wrapper #header #navbar .navbar-full .search-box input {
-          height: 30px;
-          min-width: 80%;
-          border: none;
-          outline: 0;
-          border-bottom: 1px solid black; }
       .wrapper #header #navbar .navbar-full .account-box {
         margin-top: 8px; }
         .wrapper #header #navbar .navbar-full .account-box .account {
@@ -2593,8 +2746,9 @@ a {
     position: relative; }
     .wrapper #content #head-slide .slide-box {
       overflow: hidden;
-      margin-top: -1px;
-      width: 100%; }
+      margin-top: 0px;
+      width: 1250px;
+      height: 600px; }
       .wrapper #content #head-slide .slide-box .btn-shop {
         position: absolute;
         bottom: 20%;
@@ -2609,18 +2763,18 @@ a {
           color: white; }
       .wrapper #content #head-slide .slide-box .btn-men {
         right: 60%;
-        width: 200px;
+        width: 300px;
         height: 70px; }
       .wrapper #content #head-slide .slide-box .btn-women {
         left: 60%;
-        width: 350px;
+        width: 300px;
         height: 70px; }
       .wrapper #content #head-slide .slide-box ul {
-        width: 5000px;
+        width: 20000px;
         white-space: nowrap; }
         .wrapper #content #head-slide .slide-box ul li {
-          width: 1280px;
-          max-height: 600px;
+          width: 1250px;
+          height: 600px;
           overflow: hidden;
           float: left; }
           .wrapper #content #head-slide .slide-box ul li img {
@@ -2649,10 +2803,12 @@ a {
     .wrapper #content #best-sellers .container-full .menu-vertical {
       margin-top: 30px;
       position: relative;
-      border: 1px solid black;
-      height: 100%;
-      padding: 10px;
-      padding-top: 30px; }
+      border-top: 1px solid black;
+      padding: 10px; }
+      .wrapper #content #best-sellers .container-full .menu-vertical .cover-search {
+        width: 25%;
+        float: left;
+        padding: 0 10px; }
       .wrapper #content #best-sellers .container-full .menu-vertical label {
         display: block;
         margin-top: 20px; }
@@ -2660,69 +2816,87 @@ a {
         width: 100%;
         height: 35px;
         border: 1px solid black;
-        font-size: 14px; }
+        font-size: 14px;
+        background-color: #fff; }
       .wrapper #content #best-sellers .container-full .menu-vertical .input-price {
         width: 100%;
         height: 35px;
         font-size: 14px;
-        border: 1px solid black; }
-      .wrapper #content #best-sellers .container-full .menu-vertical .btn-search {
-        width: 50%;
-        height: 35px;
-        font-size: 14px;
         border: 1px solid black;
-        margin-top: 20px; }
+        background-color: #fff; }
+      .wrapper #content #best-sellers .container-full .menu-vertical .btn-search {
+        width: 100%;
+        height: 35px;
+        font-size: 16px;
+        border: 1px solid black;
+        margin-top: 37px;
+        color: #fff;
+        background-color: #000; }
         .wrapper #content #best-sellers .container-full .menu-vertical .btn-search:hover {
-          color: #fff;
-          background-color: #000; }
-    .wrapper #content #best-sellers .container-full .features .products {
-      margin-top: 30px;
-      position: relative;
-      border-top: 1px solid black;
-      padding-top: 20px; }
-      .wrapper #content #best-sellers .container-full .features .products .product {
-        width: 25%;
-        float: left;
-        padding: 10px; }
-        .wrapper #content #best-sellers .container-full .features .products .product .cover-img {
-          width: 100%;
-          height: 80%;
-          position: relative; }
-          .wrapper #content #best-sellers .container-full .features .products .product .cover-img:hover {
-            opacity: 0.7; }
-          .wrapper #content #best-sellers .container-full .features .products .product .cover-img img {
-            width: 100%; }
-          .wrapper #content #best-sellers .container-full .features .products .product .cover-img .cover-btns {
+          cursor: pointer; }
+    .wrapper #content #best-sellers .container-full .features {
+      margin-top: 30px; }
+      .wrapper #content #best-sellers .container-full .features .products {
+        margin-top: 30px;
+        position: relative;
+        border-top: 1px solid black;
+        padding-top: 20px; }
+        .wrapper #content #best-sellers .container-full .features .products .product {
+          width: 25%;
+          float: left;
+          padding: 10px; }
+          .wrapper #content #best-sellers .container-full .features .products .product .cover-img {
             width: 100%;
-            position: absolute;
-            bottom: 5px;
-            left: 0;
-            display: none; }
-            .wrapper #content #best-sellers .container-full .features .products .product .cover-img .cover-btns .btn-add-cart {
-              float: left;
-              width: 50%;
-              height: 35px;
-              color: #fff;
-              background-color: #2da9ff;
-              border: none;
-              cursor: pointer; }
-            .wrapper #content #best-sellers .container-full .features .products .product .cover-img .cover-btns .btn-buy-now {
-              float: right;
-              width: 50%;
-              height: 35px;
-              color: #fff;
-              background-color: #ff8e00;
-              border: none;
-              cursor: pointer; }
-          .wrapper #content #best-sellers .container-full .features .products .product .cover-img:hover .cover-btns {
+            height: 80%;
+            position: relative; }
+            .wrapper #content #best-sellers .container-full .features .products .product .cover-img:hover {
+              opacity: 0.7; }
+            .wrapper #content #best-sellers .container-full .features .products .product .cover-img img {
+              width: 100%; }
+            .wrapper #content #best-sellers .container-full .features .products .product .cover-img .cover-btns {
+              width: 100%;
+              position: absolute;
+              bottom: 5px;
+              left: 0;
+              display: none; }
+              .wrapper #content #best-sellers .container-full .features .products .product .cover-img .cover-btns .btn-add-cart {
+                float: left;
+                width: 50%;
+                height: 35px;
+                color: #fff;
+                background-color: #2da9ff;
+                border: none;
+                cursor: pointer; }
+              .wrapper #content #best-sellers .container-full .features .products .product .cover-img .cover-btns .btn-buy-now {
+                float: right;
+                width: 50%;
+                height: 35px;
+                color: #fff;
+                background-color: #ff8e00;
+                border: none;
+                cursor: pointer; }
+            .wrapper #content #best-sellers .container-full .features .products .product .cover-img:hover .cover-btns {
+              display: block; }
+          .wrapper #content #best-sellers .container-full .features .products .product .name {
+            font-size: 14px;
+            margin: 5px 10px;
             display: block; }
-        .wrapper #content #best-sellers .container-full .features .products .product .name {
-          font-size: 14px;
-          margin: 5px 10px;
-          display: block; }
-        .wrapper #content #best-sellers .container-full .features .products .product .price {
-          font-size: 16px;
-          margin-left: 10px; }
+          .wrapper #content #best-sellers .container-full .features .products .product .price {
+            font-size: 16px;
+            margin-left: 10px; }
+        .wrapper #content #best-sellers .container-full .features .products .cover-pagination {
+          margin: 30px 0; }
+          .wrapper #content #best-sellers .container-full .features .products .cover-pagination ul {
+            list-style: none;
+            float: right; }
+            .wrapper #content #best-sellers .container-full .features .products .cover-pagination ul li {
+              min-width: 30px;
+              height: 30px;
+              float: left;
+              margin-right: 4px;
+              padding: 5px;
+              font-size: 16px;
+              border: 1px solid #000; }
   .wrapper #content #hot-products {
     position: relative;
     margin-top: 30px;
@@ -2801,7 +2975,7 @@ a {
       float: right; }
       .wrapper #content #details-product .right .brand-product {
         font-size: 30px;
-        margin: 20px 0; }
+        margin: 10px 0; }
       .wrapper #content #details-product .right .name-product {
         font-size: 20px;
         margin: 20px 0; }
@@ -2809,32 +2983,37 @@ a {
         font-size: 14px;
         margin-bottom: 10px; }
       .wrapper #content #details-product .right .price-product {
-        font-size: 25px; }
+        font-size: 20px; }
       .wrapper #content #details-product .right .size-select {
-        width: 110px;
+        width: 150px;
         height: 30px;
         margin: 20px 0;
         border: 1px solid #000;
         border-radius: none;
-        display: block; }
+        display: block;
+        background-color: #fff; }
         .wrapper #content #details-product .right .size-select option {
           border-radius: none; }
       .wrapper #content #details-product .right .quantity {
         margin: 20px 0;
         float: left; }
         .wrapper #content #details-product .right .quantity input {
-          width: 60px;
+          width: 80px;
           height: 30px;
           text-align: center;
           font-size: 13px;
           margin: 0 1px;
           border: none;
-          border: 1px solid black; }
+          border: 1px solid black;
+          background-color: #fff;
+          float: left; }
         .wrapper #content #details-product .right .quantity button {
-          width: 30px;
+          width: 35px;
           height: 30px;
-          font-size: 13px; }
+          font-size: 14px;
+          background-color: #fff; }
         .wrapper #content #details-product .right .quantity .btn-sub {
+          float: left;
           border: 1px solid black; }
         .wrapper #content #details-product .right .quantity .btn-plus {
           margin-right: 20px;
@@ -2875,9 +3054,11 @@ a {
           text-decoration: none;
           color: #fff; }
       .wrapper #content #details-product .right .info-product {
-        margin: 20px 0; }
-        .wrapper #content #details-product .right .info-product h4 {
-          margin: 10px 0; }
+        margin: 50px 0; }
+        .wrapper #content #details-product .right .info-product p {
+          font-family: sans-serif;
+          font-size: 13px;
+          margin: 20px 0; }
     .wrapper #content #details-product fb-comments {
       margin-left: 40px; }
   .wrapper #content #login-register {
@@ -2937,15 +3118,14 @@ a {
           height: 40px;
           width: 200px;
           display: block;
-          color: #000;
-          background-color: #ccc;
-          border: 1px solid black;
+          color: white;
+          background-color: #258bd1;
+          border: none;
           font-size: 20px;
           margin: 10px 0;
           margin-top: 20px; }
           .wrapper #content #login-register .box-content .login .btn-login:hover {
-            color: white;
-            background-color: #000; }
+            cursor: pointer; }
         .wrapper #content #login-register .box-content .login .forget-password {
           font-size: 14px; }
       .wrapper #content #login-register .box-content .register {
@@ -2994,16 +3174,17 @@ a {
           width: 200px;
           height: 40px;
           margin-top: 10px;
-          background-color: #ccc;
-          border: 1px solid black;
+          color: white;
+          background-color: #f36f36;
+          border: none;
           font-size: 20px;
           outline: none;
           cursor: pointer; }
           .wrapper #content #login-register .box-content .register .btn-register:hover {
-            color: white;
-            background-color: #000; }
+            cursor: pointer; }
   .wrapper #content #cart {
-    padding: 0 100px; }
+    padding: 0 100px;
+    min-height: 350px; }
     .wrapper #content #cart .title-cart {
       height: 70px;
       font-size: 30px;
@@ -3108,36 +3289,41 @@ a {
       .wrapper #content #checkout .box-content #form-info-client input[name="name"],
       .wrapper #content #checkout .box-content #form-info-client input[name="phone"],
       .wrapper #content #checkout .box-content #form-info-client input[name="email"],
-      .wrapper #content #checkout .box-content #form-info-client textarea[name="address"] {
+      .wrapper #content #checkout .box-content #form-info-client textarea[name="address"],
+      .wrapper #content #checkout .box-content #form-info-client textarea[name="note"] {
         display: block;
         width: 90%;
         height: 30px;
         border: 1px solid black;
-        margin: 10px; }
-      .wrapper #content #checkout .box-content #form-info-client textarea[name="address"] {
+        margin: 10px;
+        margin-left: 0;
+        padding-left: 10px; }
+      .wrapper #content #checkout .box-content #form-info-client textarea[name="address"],
+      .wrapper #content #checkout .box-content #form-info-client textarea[name="note"] {
         height: 80px; }
       .wrapper #content #checkout .box-content .payments .visa,
       .wrapper #content #checkout .box-content .payments .atm,
       .wrapper #content #checkout .box-content .payments .received {
-        margin: 10px; }
-      .wrapper #content #checkout .box-content .summary-order {
+        margin: 10px;
+        margin-left: 0; }
+      .wrapper #content #checkout .box-content .summary-order ul {
+        list-style: none;
+        padding: 20px;
+        margin-top: 10px;
         background-color: #DBDBDB; }
-        .wrapper #content #checkout .box-content .summary-order ul {
-          list-style: none;
-          padding: 20px; }
-          .wrapper #content #checkout .box-content .summary-order ul li {
-            margin: 10px;
-            border-bottom: 1px dotted black; }
-            .wrapper #content #checkout .box-content .summary-order ul li .total-cost {
-              font-size: 20px; }
-            .wrapper #content #checkout .box-content .summary-order ul li .submit {
-              height: 40px;
-              width: 100%;
-              color: #fff;
-              border: none;
-              background-color: #f70; }
-            .wrapper #content #checkout .box-content .summary-order ul li:last-child {
-              border: none; }
+        .wrapper #content #checkout .box-content .summary-order ul li {
+          margin: 10px;
+          border-bottom: 1px dotted black; }
+          .wrapper #content #checkout .box-content .summary-order ul li .total-cost {
+            font-size: 20px; }
+          .wrapper #content #checkout .box-content .summary-order ul li .submit {
+            height: 40px;
+            width: 100%;
+            color: #fff;
+            border: none;
+            background-color: #f70; }
+          .wrapper #content #checkout .box-content .summary-order ul li:last-child {
+            border: none; }
   .wrapper #content #success {
     width: 80%;
     height: 500px;
@@ -3207,17 +3393,20 @@ a {
           min-width: 70%;
           border: 1px solid black;
           padding-left: 5px;
-          font-size: 14px; }
+          font-size: 14px;
+          float: left; }
         .wrapper #footer .menu-box .box-right .contact .send-mail .send {
           width: 70px;
           height: 30px;
+          color: white;
+          background-color: black;
           border: 1px solid black;
-          margin-top: -1px; }
+          margin-top: 0;
+          margin-left: 2px; }
           .wrapper #footer .menu-box .box-right .contact .send-mail .send:hover {
-            color: white;
-            background-color: black; }
+            cursor: pointer; }
         .wrapper #footer .menu-box .box-right .contact .social-link {
-          margin-top: 20px; }
+          margin-top: 10px; }
           .wrapper #footer .menu-box .box-right .contact .social-link ul {
             margin-left: 0;
             list-style: none; }
@@ -3225,30 +3414,36 @@ a {
               float: left;
               margin-right: 10px; }
               .wrapper #footer .menu-box .box-right .contact .social-link ul li a i {
-                width: 30px;
-                height: 30px;
-                border: 1px solid black;
-                padding: 7px;
-                font-size: 16px;
-                border-radius: 15px; }
+                width: 40px;
+                height: 40px;
+                padding: 12px;
+                font-size: 18px;
+                border-radius: 20px; }
               .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.facebook {
-                padding: 8px; }
+                padding: 12px;
+                background-color: #3a5b93;
+                color: white; }
                 .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.facebook:hover {
-                  color: white;
-                  background-color: #3a5b93;
+                  cursor: pointer;
                   border: none; }
-              .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.twitter:hover {
-                color: white;
+              .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.twitter {
                 background-color: #00a3ec;
-                border: none; }
-              .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.google:hover {
+                color: white; }
+                .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.twitter:hover {
+                  cursor: pointer;
+                  border: none; }
+              .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.google {
                 color: #f99;
-                background-color: #00a3ec;
-                border: none; }
-              .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.pinterest:hover {
+                background-color: #00a3ec; }
+                .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.google:hover {
+                  border: none;
+                  cursor: pointer; }
+              .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.pinterest {
                 color: white;
-                background-color: #f97;
-                border: none; }
+                background-color: #f97; }
+                .wrapper #footer .menu-box .box-right .contact .social-link ul li a i.pinterest:hover {
+                  border: none;
+                  cursor: pointer; }
     .wrapper #footer .copyright {
       height: 30px;
       text-align: center;

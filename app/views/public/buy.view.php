@@ -59,7 +59,7 @@ require dirname(__DIR__).'/public/require/header.view.php';
                                 
 
 
-                                <div class="col-sm-12 col-xs-2 col-md-2 col-lg-2">
+                                <div class="col-sm-3 col-xs-3 col-md-3 col-lg-3">
                                     <div class="payments">
                                         <div class="title-box-payments">Payments</div>
 
@@ -73,14 +73,14 @@ require dirname(__DIR__).'/public/require/header.view.php';
                                        } ?>
                                    </div>
                                </div>
-                               <div class="col-sm-12 col-xs-6 col-md-6 col-lg-6">
+                               <div class="col-sm-12 col-xs-5 col-md-5 col-lg-5">
                                 <div class="summary-order">
                                     <div class="title-box-summary">Summary</div>
                                     <div class="content-summary">
                                         <ul>
                                             <li>
                                                 <div class="row">
-                                                    <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2">
+                                                    <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4">
                                                         Name
                                                     </div>
                                                     <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2">
@@ -90,7 +90,7 @@ require dirname(__DIR__).'/public/require/header.view.php';
                                                        Color
                                                    </div>
                                                    <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2">
-                                                    Quantity
+                                                    Quant
                                                 </div>
                                                 <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2">
                                                     Price
@@ -113,7 +113,7 @@ require dirname(__DIR__).'/public/require/header.view.php';
                                                ?>
                                                <li>
                                                 <div class=" row">
-                                                    <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2">
+                                                    <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4">
                                                         <?php echo $value->namesp?>
                                                     </div>
                                                     <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2">

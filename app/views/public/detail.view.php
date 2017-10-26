@@ -16,7 +16,7 @@
                             <p class="brand-product">Adidas</p>
                             <p class="name-product"><?php echo $productInfo[0]->name;?></p>
                             <p class="id-product" id ="notify" style="color: red"></p>
-                            <p class="price-product"><?php echo $productInfo[0]->price;?> VND</p>
+                            <p class="price-product">$ <?php echo $productInfo[0]->price;?></p>
                             <div class="quantity">
                                 <button class="btn-sub" id ='sub' >-</button>
                                 <span id='number'>
@@ -51,11 +51,11 @@
                                     <button class="add-cart" id ="addCart"><a href="" onclick="return false;">Add to cart</a></button>
                                 </div>
                                 <div class="col-md-6">
-                                    <button class="add-cart" id ="addCart"><a href="/detail/related/<?php echo $productInfo[0]->cat_id;?>/<?php echo $productInfo[0]->id;?>" >Related products</a></button>
+                                    <button class="checkout" ><a href="/buy">Buy Now</a></button>
                                 </div>
                             </div>
                             <div class="info-product">
-                                <h4><?php echo $productInfo[0]->preview_text;?></h4>
+                                <p><?php echo $productInfo[0]->preview_text;?></p>
                                 <p>​<?php echo $productInfo[0]->detail_text;?></p>
                             </div>
                             <div class="fb-comments" data-href="http://localhost:8000/detail/<?php echo $productInfo[0]->id; ?>" data-numposts="10"></div>

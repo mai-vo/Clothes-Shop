@@ -131,8 +131,8 @@ require dirname(__DIR__).'/public/require/header.view.php';
                             </div>
                             <div class="box-checkout row">
                                 <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
-                                    <a href="/buy"><button class="btn-checkout" >Buy</button></a>
-                                    <a href="" onclick="return false;"><button class="btn-continues buyproduct" id='updateProducts'>Update</button></a>
+                                    <a href="/buy"><button class="btn-checkout" >Buy Now</button></a>
+                                    <a href="" onclick="return false;"><button class="btn-continues buyproduct" id='updateProducts'>Update Info</button></a>
 
                                 </div>
                             </div>

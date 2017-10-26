@@ -150,31 +150,38 @@
                                 <h3 class="title-menu">Categories</h3>
                             </li>
                             <li>
-                                <div class="box-search">
-                                    <input type="text" name="" placeholder="search">
-
-                                </div>
-
-                            </li>
-                            <li>
                                 <h4>For Men</h4>
                             </li>
-                            <li><a href="product.html">T-Shirt</a></li>
-                            <li><a href="product.html">Shirt</a></li>
-                            <li><a href="product.html">Jacket</a></li>
-                            <li><a href="product.html">Trousers</a></li>
-                            <li><a href="product.html">Jean</a></li>
-                            <li><a href="product.html">Khaki</a></li>
+                            <?php
+                                foreach ($gender_men_cats as $key => $item) {
+                                    $id=$item->id;
+                                    $name=$item->name;
+                            ?>
+                            <li>
+                                <a href="/cat/<?php echo $id; ?>"><?php echo $name; ?></a>
+                            </li>
+                            <?php } ?>
                             <li>
                                 <h4>For Women</h4>
                             </li>
-                            <li><a href="product.html">T-Shirt</a></li>
-                            <li><a href="product.html">Shirt</a></li>
-                            <li><a href="product.html">Jacket</a></li>
-                            <li><a href="product.html">Trousers</a></li>
-                            <li><a href="product.html">Jean</a></li>
-                            <li><a href="product.html">Khaki</a></li>
-                            <li><a href="product.html">Account</a></li>
+                                <?php
+                                    foreach ($gender_women_cats as $key => $item) {
+                                        $id=$item->id;
+                                        $name=$item->name;
+                                ?>
+                                <li>
+                                    <a href="/cat/<?php echo $id; ?>"><?php echo $name; ?></a>
+                                </li>
+                                <?php } ?>        
+                            <li>
+                                <?php 
+                                    if(!isset($_SESSION['login'])){ 
+                                        echo '<button class="account" id="account"><a href=""><i class="fa fa-sign-in" aria-hidden="true"></i> Account</a></button>';
+                                    }else{
+                                        echo '<a href="/logout" style="margin-left:10px;" title="">Log out</a>';
+                                    }
+                                ?>
+                            </li>
                         </ul>
                     </div>
                 </div>
