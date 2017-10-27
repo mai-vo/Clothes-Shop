@@ -1,5 +1,6 @@
 window.addEventListener("DOMContentLoaded", function(event) {
     let body = document.getElementsByTagName("body")[0];
+    let windowWidth = window.innerWidth;
 
     let loginBox = document.getElementById("login-register");
     // show login and register box

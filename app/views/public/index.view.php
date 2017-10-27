@@ -98,6 +98,7 @@ require dirname(__DIR__).'/public/require/header.view.php';
                 require dirname(__DIR__).'/public/require/hot_product.view.php';
             ?>
         </section>
+        
         <?php
             require dirname(__DIR__).'/public/require/login-register.view.php';
         ?>
@@ -105,3 +106,4 @@ require dirname(__DIR__).'/public/require/header.view.php';
         <?php
         require dirname(__DIR__).'/public/require/footer.view.php';
         ?>
+        <script type="text/javascript" src="/public/assets/js/app.js"></script>
